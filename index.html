@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>tictactoe    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+    <title>tictactoe </title>
 </head>
-<body>
-    
+
+<body onload="init()">
+    <div class="content">
+        <div class="start-screen d-none" id="start-screen"><h1 class="h1">TIC TAC TOE</h1><button class="button" onclick="start()">START GAME</button></div>
+        <div class="game-over d-none" id="game-over">
+        </div>
+        <button class="button d-none" id="button" onclick="restart(), init()">Restart</button>
+        <div class="top">
+            <div class="player-panel inactive" id="player-1">
+                Player 1
+                <img src="img/cross.png" class="player-img">
+            </div>
+            <div class="player-panel inactive" id="player-2">
+                Player 2
+                <img src="img/circle.png" class="player-img">
+            </div>
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <td onclick="fillShape(0)"><img id="circle-1" class="shape d-none" src="img/circle.png"><img
+                            id="cross-1" class="shape d-none" src="img/cross.png"></td>
+                    <td onclick="fillShape(1)"><img id="circle-2" class="shape d-none" src="img/circle.png"><img
+                            id="cross-2" class="shape d-none" src="img/cross.png"></td>
+                    <td onclick="fillShape(2)"><img id="circle-3" class="shape d-none" src="img/circle.png"><img
+                            id="cross-3" class="shape d-none" src="img/cross.png"></td>
+                </tr>
+                <tr>
+                    <td onclick="fillShape(3)"><img id="circle-4" class="shape d-none" src="img/circle.png"><img
+                            id="cross-4" class="shape d-none" src="img/cross.png"></td>
+                    <td onclick="fillShape(4)"><img id="circle-5" class="shape d-none" src="img/circle.png"><img
+                            id="cross-5" class="shape d-none" src="img/cross.png"></td>
+                    <td onclick="fillShape(5)"><img id="circle-6" class="shape d-none" src="img/circle.png"><img
+                            id="cross-6" class="shape d-none" src="img/cross.png"></td>
+                </tr>
+                <tr>
+                    <td onclick="fillShape(6)"><img id="circle-7" class="shape d-none" src="img/circle.png"><img
+                            id="cross-7" class="shape d-none" src="img/cross.png"></td>
+                    <td onclick="fillShape(7)"><img id="circle-8" class="shape d-none" src="img/circle.png"><img
+                            id="cross-8" class="shape d-none" src="img/cross.png"></td>
+                    <td onclick="fillShape(8)"><img id="circle-9" class="shape d-none" src="img/circle.png"><img
+                            id="cross-9" class="shape d-none" src="img/cross.png"></td>
+                </tr>
+                <div id="line-1" class="horizontal-line" style="top: 64px; left: 35px;"></div>
+                <div id="line-2" class="horizontal-line" style="top: 204.5px; left: 35px;"></div>
+                <div id="line-3" class="horizontal-line" style="top: 344.5px; left: 35px"></div>
+                <div id="line-4" class="horizontal-line make-vertical" style="top: 205px; left: 34px;"></div>
+                <div id="line-5" class="horizontal-line make-vertical" style="top: 205px; left: -106px;"></div>
+                <div id="line-6" class="horizontal-line make-vertical" style="top: 205px; left: 174.5px;"></div>
+                <div id="line-7" class="horizontal-line" style="left: 34px; top: 204px; transform:rotate(45deg) scaleX(0.0);"></div>
+                <div id="line-8" class="horizontal-line" style="left: 34px; top: 204px;transform:rotate(-45deg) scaleX(0.0);"></div>
+            </table>
+        </div>
+    </div>
 </body>
+
 </html>

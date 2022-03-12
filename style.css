@@ -1,0 +1,182 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: darkgreen;
+}
+
+.h1 {
+    color:#4CAF50;
+    text-align: center;
+    margin-top: 100px;
+    color: #00D903 !important;
+    font-size: 7rem;
+}
+
+.h2 {
+    color:#4CAF50;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 100px;
+    color: #00D903 !important;
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+tr {
+    width: 399px;
+}
+
+td {
+    width: 133px;
+    height: 133px;
+    border: 5px solid black;
+    position: relative;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: #f2f2f2;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.table {
+    position: relative;
+}
+
+table tr:first-child td {
+    border-top: 0;
+}
+
+table tr td:first-child {
+    border-left: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:last-child {
+    border-right: 0;
+}
+
+.shape {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 19px;
+    top: 18px;
+}
+
+.d-none {
+    display: none;
+}
+
+.top {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.player-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+    margin-left: 24px;
+    font-size: 24px;
+}
+
+.player-panel img {
+    margin-left: 24px;
+}
+
+.player-img {
+    height: 70px;
+    width: 70px;
+}
+
+.inactive {
+    opacity: 0.5;
+}
+
+.horizontal-line {
+    width: 350px;
+    height: 8px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 200ms ease-in-out;
+    z-index: 999;
+}
+
+.make-vertical {
+    transform:rotate(90deg) scaleX(0.0);
+}
+
+.game-over {
+    background-image:  url("img/game-over.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    position: absolute;
+    top: 70px;
+    height: 600px;
+    width: 70%;
+    z-index: 1000;
+    animation: zoomIn 225ms ease-in-out;
+    text-align: center;
+    background-position: left;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 30px 64px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    position: absolute;
+    top: 500px;
+    z-index: 1001;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    animation: zoomIn 300ms ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: darkgreen;
+}
+
+.start-screen{
+    position: absolute;
+    height: 100vh;
+    width: 100vh;
+    background-color: black;
+    z-index: 998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
